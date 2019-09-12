@@ -96,7 +96,10 @@ multiply(4, 3, function(answer){
 
 //Code Here 
 function contains(array, name, callback){
-  
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === name){callback(true)}
+    else{callback(false)}
+  }
 }
 
 // Do not edit the code below.
@@ -147,7 +150,9 @@ uniq(names, function(uniqArr){
 
 //Code Here 
 function each(names, callback){
-  
+  for(let i = 0; i < names.length; i++){
+    callback(names[i], i);
+  } 
 }
 
 // Do not edit the code below.
@@ -166,6 +171,11 @@ each(names, function(item, indice){
 */
 
 // Code here
+function getUserById(users, searches, callback){
+  for(let i = 0; i < users.length; i++){
+    if(users[i].id === searches){callback(users[i])}
+  }
+}
 
 // Do not edit the code below.
 var users = [
